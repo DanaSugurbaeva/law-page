@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanger Group - Юридические услуги</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0c1a24;
+            color: #ffffff;
+        }
+        header, .footer {
+            background-color: #0c1a24;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #c7a157;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #ffffff;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #c7a157;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #c7a157;
+            margin-bottom: 20px;
+        }
+        .cta {
+            background-color: #c7a157;
+            color: #0c1a24;
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #c7a157;
+            color: #0c1a24;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Zanger Group</h1>
+        <p>Юридическое сопровождение бизнеса, тендеров и госзакупок</p>
+    </header>
+
+    <nav>
+        <a href="#services">Услуги</a>
+        <a href="#about">О компании</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <ul>
+            <li>Помогаем выигрывать тендеры и становиться потенциальными победителями</li>
+            <li>Сопровождаем участие в государственных закупках и тендерах</li>
+            <li>Подготовка заявок и конкурсной документации</li>
+            <li>Исключаем из реестра недобросовестных поставщиков (РНП)</li>
+            <li>Выигрываем крупные тендеры и защищаем клиентов в судах</li>
+            <li>Оспариваем незаконные действия заказчиков и конкурентов</li>
+            <li>Каждое 3-е наше дело заканчивается победой!</li>
+        </ul>
+        <a href="#contact" class="cta">Оставить заявку</a>
+    </section>
+
+    <section id="about">
+        <h2>О компании</h2>
+        <div class="slider">
+            <img src="images/F4B06CE7-3077-4D3C-8E49-26A4B12BE6F8.jpeg" class="active" alt="Юрист Zanger Group">
+            <img src="images/1D668077-AE23-4A7D-B35D-D37E4F3A8B08.jpeg" alt="Команда Zanger Group">
+            <img src="images/7A92B261-CA60-4461-A17F-57D44BDC6846.jpeg" alt="Юридические услуги">
+            <img src="images/73EC1832-F15F-4FC6-81DF-96C66AFEA5D0.jpeg" alt="Тендеры и закупки">
+            <img src="images/CE5405D8-8A55-40FA-BE27-885B3F2F646D.jpeg" alt="Работа с клиентами">
+        </div>
+        <p>ТОО "Zanger Group" — команда профессиональных юристов, состоящих в Палате юридических консультантов. Мы оказываем помощь бизнесу по всей территории Казахстана.</p>
+        <p>Работаем удаленно. Адрес: г. Астана, ул. Сыганак, 47.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Телефон: <strong>+7 776 155 59 67</strong></p>
+        <p>Email: sugurbaeva.dana@mail.ru</p>
+        <form>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+            <input type="submit" value="Отправить заявку">
+        </form>
+    </section>
+
+    <div class="footer">
+        &copy; 2025 Zanger Group. Все права защищены.
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slider img');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+
+</html>
